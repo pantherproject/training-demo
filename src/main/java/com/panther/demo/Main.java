@@ -18,7 +18,14 @@ public class Main {
 //        }
 
 
-        String s = "Caused by: java.lang.ArrayIndexOutOfBoundsException: 4";
-        System.out.println(s.matches("^Caused by: java\\.lang\\..*Exception.*"));
+//        String s = "Caused by: java.lang.ArrayIndexOutOfBoundsException: 4";
+//        System.out.println(s.matches("^Caused by: java\\.lang\\..*Exception.*"));
+        System.out.println(mm.MM.name());
+        System.out.println(mm.kk.name());
+        String s = "m";
+    }
+
+    enum mm {
+        MM, kk
     }
 }
