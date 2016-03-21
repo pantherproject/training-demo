@@ -1,6 +1,7 @@
 package com.panther.demo.bridge;
 
 /**
+ * 结构型模式
  * 客户端连接
  * Created by panther.dongdong on 2016/3/21.
  */
