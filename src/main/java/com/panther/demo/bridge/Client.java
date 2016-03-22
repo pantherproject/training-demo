@@ -7,7 +7,7 @@ package com.panther.demo.bridge;
  */
 public class Client {
     public static void main(String[] args) {
-        DriverManager driverManager = new MyDriverManager();
+        DriverManager driverManager = new AppDriverManager();
 
         //mysql连接
         Driver driver = new MysqlDriver();
@@ -15,7 +15,18 @@ public class Client {
         driverManager.connect();
 
         //db2连接
-        Driver driver1 = new DB2Driver();
+        Driver driver1 = new OracleDriver();
+        driverManager.setDriver(driver1);
+        driverManager.connect();
+
+
+        driverManager = new WebDriverManager();
+
+        //mysql连接
+        driverManager.setDriver(driver);
+        driverManager.connect();
+
+        //db2连接
         driverManager.setDriver(driver1);
         driverManager.connect();
     }
