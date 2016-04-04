@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <script type="text/javascript" src="jquery.js"></script>
+    <title>test</title>
+</head>
+<!--<script>-->
+<!--var loadPage = $.ajax({-->
+<!--async: true,-->
+<!--type: "POST",-->
+<!--dataType: "html",-->
+<!--url: "http://l-sms2.wap.dev.cn0.qunar.com:9081/statistics/channelbill.json?startDate=2016-03-01&endDate=2016-03-29&channel=hs",-->
+<!--success: function (json) {-->
+
+<!--}-->
+<!--});-->
+<!--</script>-->
+<script>
+    var param = {
+        "startDate": "2016-02-01",
+        "endDate": "2016-02-28",
+        "channel": "hs"
+    };
+    var url = "/statistics/channelbill.json";
+    var loadP = $.getJSON(url, param, function (json) {
+        console.log(json.desc);
+        $("#nn").append(json.desc);
+    });
+</script>
+<body id="nn" onload="loadP">
+
+</body>
+</html>
